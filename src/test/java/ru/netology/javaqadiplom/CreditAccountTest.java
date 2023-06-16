@@ -60,7 +60,7 @@ public class CreditAccountTest {
         CreditAccount account = new CreditAccount(
                 2_000,
                 5_000,
-                15
+                11
         );
         account.pay(-100);
 
