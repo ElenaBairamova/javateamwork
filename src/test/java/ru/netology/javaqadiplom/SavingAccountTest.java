@@ -17,7 +17,7 @@ public class SavingAccountTest {
 
         account.add(10_000);
 
-        Assertions.assertEquals(1_000 + 10_000, account.getBalance());
+        Assertions.assertEquals( 1_000, account.getBalance());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class SavingAccountTest {
     }
 
     @Test
-    public void negativeMaxBaiance() {  // максимальный баланс не может быть отрицательным.
+    public void negativeMaxBalance() {  // максимальный баланс не может быть отрицательным.
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new SavingAccount(
                     2_000,
@@ -74,7 +74,7 @@ public class SavingAccountTest {
     }
 
     @Test
-    public void icheckingTheBalanceForEqualityToTheMinBalance() {   // начальный баланс не может быть больше максимального.
+    public void checkingTheBalanceForEqualityToTheMinBalance() {   // начальный баланс не может быть больше максимального.
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new SavingAccount(
                     10_000,
@@ -105,7 +105,7 @@ public class SavingAccountTest {
         SavingAccount account = new SavingAccount(1_000, 1_000, 10_000, 5);
         boolean result = account.pay(2_000);
 
-        Assertions.assertEquals(2_000, account.getBalance());
+        Assertions.assertEquals(1_000, account.getBalance());
         Assertions.assertEquals(false, result);
     }
 
@@ -124,8 +124,7 @@ public class SavingAccountTest {
     public void checkingTheCalculationOfInterestOnTheBalanceOfTheAccount() {  //проверка начисления процентов на остаток по счету
         SavingAccount account = new SavingAccount(1_000, 1_000, 10_000, 5);
 
-        account.yearChange();
-        Assertions.assertEquals(50, account.getBalance());
+        Assertions.assertEquals(50, account.yearChange());
     }
 }
 
