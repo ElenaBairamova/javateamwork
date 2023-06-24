@@ -111,7 +111,7 @@ public class SavingAccountTest {
 
 
     @Test
-    public void checkingTheCalculationOfMinBalanceWhenBuying() {  //проверка расчета минимального остатка при покупке
+    public void checkingTheCalculationOfMinBalanceWhenBuying() {  //проверка расчета мин. остатка при покупке
         SavingAccount account = new SavingAccount(2_000, 1_000, 10_000, 5);
         boolean result = account.pay(1_000);
 
