@@ -101,7 +101,7 @@ public class SavingAccountTest {
 
 
     @Test
-    public void balanceMinBalance() { //проверка минимального баланса
+    public void balanceMinBalance() { //проверка мин баланса
         SavingAccount account = new SavingAccount(1_000, 1_000, 10_000, 5);
         boolean result = account.pay(2_000);
 
