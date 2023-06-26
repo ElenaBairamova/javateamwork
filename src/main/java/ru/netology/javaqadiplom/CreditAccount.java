@@ -75,7 +75,7 @@ public class CreditAccount extends Account {
      * @param amount
      * @return true если операция прошла успешно, false иначе.
      * @return
-     */  +
+     */
 
     @Override
     public boolean add(int amount) {
